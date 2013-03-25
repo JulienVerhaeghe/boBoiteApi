@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}My Blog{% endblock %}
+
+{% block content %}	
+	{% for current in data %}
+		<h1><a href="/boBoiteApi/view/{{ current.id_newsletter }}">{{ current.nom }}</a> </h1>
+		<p>{{ article.summary }}</p>
+	{% else %}	
+		<p>There are currently no articles.</p>
+	{% endfor %}
+{% endblock %}

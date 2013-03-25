@@ -1,0 +1,23 @@
+<form action="{{ action_url }}" method="post">
+	<h1>{{ action_name }} Article</h1>
+	
+	<p>
+		<label for="mail">mail</label><br />
+		<input type="text" name="mail" value="{{ data.mail|default('') }}" id="mail" />
+	</p>
+	
+	<p>
+		<label for="nom">nom </label><br />
+		<input type="text" name="nom" value="{{ data.nom|default('') }}" id="nom" />
+	</p>
+	
+	<p>
+		<label for="prenom">prenom </label><br />
+                <input name="prenom" id="prenom" value="{{ data.prenom|default('') }}"/>
+	</p>	
+	
+	
+	<p>
+		<input type="submit" value="{{ action_name }} Article" />
+	</p>
+</form>

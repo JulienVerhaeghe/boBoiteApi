@@ -1,0 +1,60 @@
+<form action="{{ action_url }}" method="post">
+	<h1>{{ action_name }} reservation</h1>
+	
+	
+	
+	<p>
+		<label for="nom">nom </label><br />
+		<input type="text" name="nom" value="{{ data.nom|default('') }}" id="nom" />
+	</p>
+	
+	<p>
+		<label for="prenom">prenom </label><br />
+                <input name="prenom" id="prenom" value="{{ data.prenom|default('') }}"/>
+	</p>
+        
+        <p>
+		<label for="mail">mail</label><br />
+		<input type="text" name="mail" value="{{ data.mail|default('') }}" id="mail" />
+	</p>
+        
+       
+        
+        <p>
+		<label for="zip_code">code postal </label><br />
+                <input name="zip_code" id="zip_code" value="{{ data.zip_code|default('') }}"/>
+	</p>
+        
+        <p>
+		<label for="rue">rue </label><br />
+                <input name="rue" id="rue" value="{{ data.rue|default('') }}"/>
+	</p>
+        
+        <p>
+		<label for="ville">ville </label><br />
+                <input name="ville" id="ville" value="{{ data.ville|default('') }}"/>
+	</p>
+        
+        <p>
+		<label for="tel">Telephone </label><br />
+                <input name="tel" id="tel" value="{{ data.ville|default('') }}"/>
+	</p>
+        
+        <p>
+		<label for="mdp">mot de passe </label><br />
+                <input name="mdp" id="mdp" value="{{ data.mdp|default('') }}"/>
+	</p>
+	
+	<p>
+		<label for="newsletter">voulez vous vous inscrire à la newsletter </label><br />
+                <input type="checkbox" name="newsletter" id="newsletter" checked="checked"/>
+	</p>
+	<p>
+		<input type="submit" value="{{ action_name }} Article" />
+	</p>
+        
+         
+        <hr/>
+        
+        
+</form>
